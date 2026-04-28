@@ -11,7 +11,6 @@ function LandingPage() {
       <Services />
       <GlobalScale />
       <Process />
-      {/* Add GlobalScale & Process similarly */}
       <Pricing />
       <BottomNav />
     </div>
