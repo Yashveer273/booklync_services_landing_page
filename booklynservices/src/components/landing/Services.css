@@ -1,0 +1,100 @@
+/* Section Container */
+.services-section {
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  background-color: #ffffff;
+}
+
+/* Header Styling */
+.services-header {
+  text-align: center;
+  margin-bottom: 5rem; /* mb-20 */
+}
+
+.services-subtitle {
+  font-size: 0.875rem; /* text-sm */
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #2563eb; /* text-blue-600 */
+  margin-bottom: 1rem;
+}
+
+.services-main-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 800;
+  color: #0f172a; /* text-slate-900 */
+}
+
+@media (min-width: 768px) {
+  .services-main-title {
+    font-size: 3rem; /* md:text-5xl */
+  }
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Service Card Styling */
+.service-card {
+  padding: 2.5rem; /* p-10 */
+  border-radius: 2rem;
+  background-color: #f8fafc; /* bg-slate-50 */
+  border: 1px solid #f1f5f9; /* border-slate-100 */
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.service-card:hover {
+  background-color: #ffffff;
+  transform: translateY(-0.25rem);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); /* shadow-2xl */
+}
+
+/* Icon Box Styling */
+.service-icon-box {
+  width: 3.5rem; /* w-14 */
+  height: 3.5rem;
+  background-color: #ffffff;
+  border-radius: 1rem; /* rounded-2xl */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+.service-card:hover .service-icon-box {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Text Content */
+.service-card-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.service-card-desc {
+  color: #475569; /* text-slate-600 */
+  line-height: 1.625;
+}

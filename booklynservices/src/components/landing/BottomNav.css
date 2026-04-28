@@ -1,0 +1,117 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #f1f5f9;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.nav-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-square {
+  width: 44px;
+  height: 44px;
+  background-color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.brand-tagline {
+  font-size: 10px;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+/* Menu Links Styling */
+.nav-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link-item {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #475569; /* Slate 600 */
+  transition: color 0.2s;
+}
+
+.nav-link-item:hover {
+  color: #2563eb;
+}
+
+/* CTA Button Styling */
+.btn-start-now {
+  background-color: #0f172a; /* Very Dark Blue/Black */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-start-now:hover {
+  background-color: #1e293b;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Hide text links on mobile to prevent crowding */
+  }
+  
+  .brand-tagline {
+    display: none;
+  }
+}
