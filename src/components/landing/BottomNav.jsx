@@ -9,7 +9,7 @@ const BottomNav = () => {
         {/* Logo Section */}
         <div className="nav-logo-group">
           <div className="logo-square">
-            <img src="https://www.booklynkservices.com/_next/image?url=%2FBook-Lynk-Services-Pvt-Ltd-logo.jpg&w=64&q=75" alt="" />
+            <img src="../public/logo.png" alt="Book Lynk Logo" />
           </div>
           <div className="logo-text-wrapper">
             <span className="brand-name">Book Lynk</span>
