@@ -11,7 +11,7 @@ const Hero = () => (
               <span className="live-ping"></span>
               <span className="live-inner"></span>
             </span>
-            Book Lynk Services: Your Business Solution
+            Book Lynk Services Pvt Ltd. : Your Business Solution
           </div>
           <h1 className="hero-title">
             Launch Your Empire <br/>For Just <span className="text-blue-600">₹30,000</span>

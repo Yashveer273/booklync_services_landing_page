@@ -1,4 +1,3 @@
-
 import { Check } from 'lucide-react';
 import './Pricing.css';
 
@@ -32,7 +31,7 @@ const Pricing = () => {
             <button className="btn-outline">Get Started</button>
           </div>
 
-          {/* Silver Plan (Featured) */}
+          {/* Silver Plan (Featured - Yearly) */}
           <div className="price-card silver-card featured">
             <div className="growth-tag">Growth Choice</div>
             <div className="card-top">
@@ -44,7 +43,7 @@ const Pricing = () => {
               </div>
               <p className="setup-fee">₹26,003 Setup Fee</p>
               <p className="monthly-fee">
-                ₹2,997.75/mo <span className="save-badge">Save 25%</span>
+                ₹2,997.75/mo billed yearly <span className="save-badge">Save 25%</span>
               </p>
             </div>
             <ul className="feature-list">
@@ -56,7 +55,7 @@ const Pricing = () => {
             <button className="btn-white">Select Silver</button>
           </div>
 
-          {/* Gold Plan */}
+          {/* Gold Plan (4 Years) */}
           <div className="price-card gold-card">
             <div className="card-top">
               <h4 className="tier-name">Gold</h4>
@@ -66,7 +65,7 @@ const Pricing = () => {
               </div>
               <p className="setup-fee">₹26,003 Setup Fee</p>
               <p className="monthly-fee">
-                ₹2,398.20/mo <span className="save-badge-green">Save 40%</span>
+                ₹2,398.20/mo billed for 4 years <span className="save-badge-green">Save 40%</span>
               </p>
             </div>
             <ul className="feature-list">

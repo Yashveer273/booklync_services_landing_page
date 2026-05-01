@@ -89,7 +89,7 @@
 
 /* CTA Button Styling */
 .btn-start-now {
-  background-color: #0f172a; /* Very Dark Blue/Black */
+  background-color: #2563eb; /* Very Dark Blue/Black */
   color: white;
   padding: 12px 28px;
   border-radius: 14px;
@@ -114,4 +114,7 @@
   .brand-tagline {
     display: none;
   }
+}
+.tab-btn {
+  cursor: pointer;
 }
