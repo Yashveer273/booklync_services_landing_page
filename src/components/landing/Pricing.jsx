@@ -13,7 +13,7 @@ const Pricing = () => {
       document.body.removeChild(script);
     };
   }, []);
-
+const Api_URL =  'https://backend.booklynkservices.com';
   const handlePayment = async (planName, planAmount) => {
     try {
       // 1. Prompt user for their name from the UI
@@ -24,7 +24,7 @@ const Pricing = () => {
       }
 
       // 2. Create the raw order on the backend
-      const response = await fetch('http://192.168.29.147:5000/api/payments/order', {
+      const response = await fetch(`${Api_URL}/api/payments/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Pricing = () => {
         order_id: orderData.orderId,
         handler: async function (paymentResponse) {
           try {
-            const verifyResponse = await fetch('http://192.168.29.147:5000/api/payments/verify', {
+            const verifyResponse = await fetch(`${Api_URL}/api/payments/verify`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
