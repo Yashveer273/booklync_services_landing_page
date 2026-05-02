@@ -164,7 +164,7 @@ const Pricing = () => {
               </div>
               <p className="setup-fee">₹26,003 Setup Fee</p>
               <p className="monthly-fee">
-                ₹2,398.20/mo billed for 4 years <span className="save-badge-green">Save 40%</span>
+                ₹2,398.20/mo billed for 3 years <span className="save-badge-green">Save 40%</span>
               </p>
             </div>
             <ul className="feature-list">
