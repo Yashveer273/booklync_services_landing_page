@@ -138,92 +138,92 @@
 /* 2. MOBILE VIEW (Centered 2 Columns + Logo & CTA)    */
 /* =================================================== */
 
+/* ... Keep your PC styles as they are ... */
+
 @media (max-width: 768px) {
   .bottom-nav {
-    height: 74px; /* Fixed compact height for mobile */
-    padding: 0;
-    background-color: rgba(255, 255, 255, 0.98);
+    height: 85px; /* Slightly taller for better thumb reach */
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid #e2e8f0;
+    padding-bottom: env(safe-area-inset-bottom); /* Fix for modern iPhones */
   }
 
   .nav-container {
-    display: grid;
-    /* Grid has 3 areas: Logo on left, Options in center, Send on right */
-    grid-template-columns: 44px 1fr 44px; 
-    align-items: center;
+    display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 0 16px;
-    gap: 12px;
+    padding: 0 12px;
+    gap: 0;
   }
 
-  /* Logo Section on far-left column */
-  .nav-logo-group {
-    justify-content: flex-start;
-    width: auto;
-  }
-
-  .logo-text-wrapper {
-    display: none; /* Hide text on mobile */
-  }
-
+  /* Logo stays simple */
   .logo-square {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #f1f5f9;
   }
 
-  /* Center Column: Both Option Columns stay perfectly centered */
+  /* Center Menu: The "Premium" Look */
   .nav-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    gap: 8px;
-    justify-content: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .nav-col-wrapper {
+    display: flex;
     align-items: center;
-    text-align: center;
+    background: #f8fafc; /* Subtle inner background */
+    border-radius: 12px;
+    padding: 6px 8px;
+    border: 1px solid #f1f5f9;
   }
 
   .nav-col {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    align-items: center; /* Centers options internally */
+    flex: 1;
+    gap: 2px;
+  }
+
+  .nav-divider {
+    width: 1px;
+    height: 30px;
+    background: #e2e8f0;
+    margin: 0 8px;
   }
 
   .nav-link-item {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
-    white-space: nowrap;
-    padding: 1px 0;
-    color: #475569;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 2px 4px;
+    transition: all 0.2s ease;
   }
 
-  /* Far-right Column: Floating icon of start */
-  .nav-cta-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  .active-link {
+    color: #2563eb !important;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 4px;
   }
 
+  /* Action Button: Floating Action Look */
   .btn-start-now {
-    padding: 0;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    border: none;
   }
 
   .btn-text {
-    display: none; /* Hide standard text on mobile */
+    display: none;
   }
 
-  .btn-mobile-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
+  .send-icon {
+    display: block !important;
+    color: white;
   }
 }
