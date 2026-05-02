@@ -1,10 +1,12 @@
-import "./BottomNav.css";
+import { Send } from 'lucide-react';
+import './BottomNav.css';
 
 const BottomNav = ({ activeTab, setActiveTab }) => {
   return (
     <nav className="bottom-nav">
       <div className="nav-container">
-        {/* Logo Section - Takes you back to landing */}
+        
+        {/* Logo Section */}
         <div
           className="nav-logo-group"
           onClick={() => setActiveTab("landing")}
@@ -19,63 +21,69 @@ const BottomNav = ({ activeTab, setActiveTab }) => {
           </div>
         </div>
 
-        {/* Navigation Menu */}
+        {/* Two-Column Navigation Menu for Mobile / Standard flex for PC */}
         <div className="nav-menu">
-          <a
-            href="#solutions"
-            onClick={() => setActiveTab("landing")}
-            className={`nav-link-item ${activeTab === "landing" ? "active-link" : ""}`}
-          >
-            Solutions
-          </a>
-          <a
-            href="#how-it-works"
-            onClick={() => setActiveTab("landing")}
-            className={`nav-link-item ${activeTab === "landing" ? "active-link" : ""}`}
-          >
-            Process
-          </a>
-          <a
-            href="#pricing"
-            onClick={() => setActiveTab("landing")}
-            className={`nav-link-item ${activeTab === "landing" ? "active-link" : ""}`}
-          >
-            Pricing
-          </a>
+          {/* Column 1: Core Navigation */}
+          <div className="nav-col core-links">
+            <a
+              href="#solutions"
+              onClick={() => setActiveTab("landing")}
+              className={`nav-link-item ${activeTab === "landing" ? "active-link" : ""}`}
+            >
+              Solutions
+            </a>
+            <a
+              href="#how-it-works"
+              onClick={() => setActiveTab("landing")}
+              className={`nav-link-item ${activeTab === "landing" ? "active-link" : ""}`}
+            >
+              Process
+            </a>
+            <a
+              href="#pricing"
+              onClick={() => setActiveTab("landing")}
+              className={`nav-link-item ${activeTab === "landing" ? "active-link" : ""}`}
+            >
+              Pricing
+            </a>
+          </div>
 
-          {/* Privacy Policy Tab Switcher */}
-          <a
-            href="#privacy"
-            onClick={() => {
-              setActiveTab("privacy");
-              window.scrollTo(0, 0); // Scroll to top when tab opens
-            }}
-            className={`nav-link-item tab-btn ${activeTab === "privacy" ? "active-link" : ""}`}
-          >
-            Privacy Policy
-          </a>
-          <a
-            href="#refund"
-            onClick={() => {
-              setActiveTab("refund");
-              window.scrollTo(0, 0); // Scroll to top when tab opens
-            }}
-            className={`nav-link-item tab-btn ${activeTab === "refund" ? "active-link" : ""}`}
-          >
-            Refund Policy
-          </a>
+          {/* Column 2: Policies */}
+          <div className="nav-col policy-links">
+            <a
+              href="#privacy"
+              onClick={() => {
+                setActiveTab("privacy");
+                window.scrollTo(0, 0);
+              }}
+              className={`nav-link-item tab-btn ${activeTab === "privacy" ? "active-link" : ""}`}
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#refund"
+              onClick={() => {
+                setActiveTab("refund");
+                window.scrollTo(0, 0);
+              }}
+              className={`nav-link-item tab-btn ${activeTab === "refund" ? "active-link" : ""}`}
+            >
+              Refund Policy
+            </a>
+          </div>
         </div>
 
         {/* Action Button */}
         <div className="nav-cta-wrapper">
           <button
-            href="#pricing"
             onClick={() => setActiveTab("landing")}
             className="btn-start-now"
           >
-            Start Now
+            <span className="btn-text">Start Now</span>
+            <span className="btn-mobile-icon"><Send size={16} /></span>
           </button>
         </div>
+
       </div>
     </nav>
   );

@@ -1,3 +1,7 @@
+/* =================================================== */
+/* 1. PC VIEW STYLES (ORIGINAL CLEAN UI)               */
+/* =================================================== */
+
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -20,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 /* Logo Styling */
@@ -40,6 +45,7 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
   border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .logo-square img {
@@ -69,17 +75,23 @@
   margin-top: 4px;
 }
 
-/* Menu Links Styling */
+/* Menu Links on PC (Columns act as inline rows) */
 .nav-menu {
   display: flex;
   gap: 40px;
+}
+
+.nav-col {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .nav-link-item {
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
-  color: #475569; /* Slate 600 */
+  color: #475569;
   transition: color 0.2s;
 }
 
@@ -87,9 +99,18 @@
   color: #2563eb;
 }
 
+.active-link {
+  color: #2563eb !important;
+  font-weight: 700;
+}
+
+.tab-btn {
+  cursor: pointer;
+}
+
 /* CTA Button Styling */
 .btn-start-now {
-  background-color: #2563eb; /* Very Dark Blue/Black */
+  background-color: #2563eb;
   color: white;
   padding: 12px 28px;
   border-radius: 14px;
@@ -98,6 +119,9 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-start-now:hover {
@@ -105,16 +129,101 @@
   transform: translateY(-1px);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none; /* Hide text links on mobile to prevent crowding */
-  }
-  
-  .brand-tagline {
-    display: none;
-  }
+.btn-mobile-icon {
+  display: none; /* Hide icon on PC */
 }
-.tab-btn {
-  cursor: pointer;
+
+
+/* =================================================== */
+/* 2. MOBILE VIEW (Centered 2 Columns + Logo & CTA)    */
+/* =================================================== */
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    height: 74px; /* Fixed compact height for mobile */
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+
+  .nav-container {
+    display: grid;
+    /* Grid has 3 areas: Logo on left, Options in center, Send on right */
+    grid-template-columns: 44px 1fr 44px; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  /* Logo Section on far-left column */
+  .nav-logo-group {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .logo-text-wrapper {
+    display: none; /* Hide text on mobile */
+  }
+
+  .logo-square {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Center Column: Both Option Columns stay perfectly centered */
+  .nav-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center; /* Centers options internally */
+  }
+
+  .nav-link-item {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 1px 0;
+    color: #475569;
+  }
+
+  /* Far-right Column: Floating icon of start */
+  .nav-cta-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .btn-start-now {
+    padding: 0;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-text {
+    display: none; /* Hide standard text on mobile */
+  }
+
+  .btn-mobile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
 }

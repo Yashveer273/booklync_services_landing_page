@@ -15,7 +15,7 @@ const RefundPolicy = ({ setActiveTab }) => {
         <div className="refund-nav-container">
           <button onClick={() => setActiveTab('landing')} className="back-link-btn">
             <ArrowLeft size={18} />
-            <span>Back to Home</span>
+            <span>Back</span>
           </button>
         </div>
       </nav>

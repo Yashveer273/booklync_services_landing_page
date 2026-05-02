@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
         <div className="privacy-nav-container">
           <a href="/" className="back-link">
             <ArrowLeft size={18} />
-            <span>Back to Home</span>
+            <span>Back</span>
           </a>
         </div>
       </nav>
