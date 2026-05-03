@@ -7,6 +7,7 @@ import PrivacyPolicy from './components/landing/PrivacyPolicy';
 import BottomNav from './components/landing/BottomNav';
 import RefundPolicy from './components/landing/RefundPolicy';
 import Services from './components/landing/Services';
+import TestimonialsSection from './components/landing/Testimonial';
 
 function App() {
   // Use state to track which tab is active: 'landing', 'privacy', or 'refund'
@@ -19,8 +20,10 @@ function App() {
           <Hero />
           <Services />
           <GlobalScale />
+
           <Process />
           <Pricing />
+          <TestimonialsSection/>
         </main>
       ) : activeTab === 'privacy' ? (
         <main className="pb-24">
