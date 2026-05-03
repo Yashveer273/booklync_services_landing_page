@@ -1,5 +1,6 @@
-import { ArrowRight, TrendingUp } from 'lucide-react';
+import { ArrowRight,  } from 'lucide-react';
 import './Hero.css';
+import HeroVisual from './HeroVisual';
 
 const Hero = () => (
   <header className="hero-container">
@@ -42,14 +43,7 @@ const Hero = () => (
         </div>
 
         {/* Right Dashboard Image Column */}
-        <div className="hero-content-right">
-          <div className="hero-image-card">
-            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000" alt="Dashboard" />
-            <div className="floating-badge">
-              <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8" />
-            </div>
-          </div>
-        </div>
+       <HeroVisual/>
 
       </div>
     </div>

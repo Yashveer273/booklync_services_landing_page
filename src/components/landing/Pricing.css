@@ -1,6 +1,7 @@
 /* Base Mobile-First Styles */
 .pricing-section {
-  padding: 4rem 1rem; /* Compact padding for small screens */
+  /* Compact padding for small screens */
+
   background-color: #ffffff;
 }
 
@@ -206,9 +207,7 @@ button:hover {
 
 /* For medium devices like tablets */
 @media (min-width: 768px) {
-  .pricing-section {
-    padding: 5rem 2rem;
-  }
+ 
 
   .pricing-grid {
     display: grid;
@@ -224,9 +223,7 @@ button:hover {
 
 /* For large devices like desktop monitors */
 @media (min-width: 1024px) {
-  .pricing-section {
-    padding: 6rem 4rem;
-  }
+  
 
   .pricing-main-title {
     font-size: 2.25rem;
