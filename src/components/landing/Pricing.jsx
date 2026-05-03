@@ -46,7 +46,7 @@ const Api_URL =  'https://backend.booklynkservices.com';
 
       // 3. Configure and launch the checkout modal
       const options = {
-        key: 'rzp_test_SaAfC6ka9tBA3G',
+        key: 'rzp_live_SkoBM00LnHE6Je',
         amount: orderData.amount,
         currency: 'INR',
         name: 'Booklynk Services',
